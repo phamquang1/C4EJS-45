@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let canhA = prompt("Nhập cạnh a");
+        let canhB = prompt("Nhập cạnh b");
+        let canhC = prompt("Nhập cạnh c");
+
+        if( Number(canhA) > 0 && Number(canhB) > 0 && Number(canhC) > 0 && (Number(canhA) + Number(canhB)) > Number(canhC) 
+        && (Number(canhB) + Number(canhC)) > Number(canhA) && (Number(canhC) + Number(canhA)) > Number(canhB)){
+            let trungBinh = (Number(canhA) + Number(canhB) + Number(canhC))/2;
+        let sTamGiac = Math.sqrt(trungBinh*(trungBinh-canhA)*(trungBinh-canhB)*(trungBinh-canhC));
+        alert(sTamGiac);
+            
+        }
+
+         else {
+            alert("Tam giac SAI ");
+         }
+
+    </script>
+    
+</body>
+</html>
