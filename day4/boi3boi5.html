@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i =1 ;
+        let j =1 ;
+        let s = 0;
+        while( s < 1000){ 
+           if( 3*i >= 5*j) {
+               s = s + 5*j;
+               j++;
+           }
+            else if( 3*i == 5*j){
+                j++;
+
+            }
+            else {
+               s = s + 3*i;
+               i++;
+        }
+     }
+        if( s >= 1000){
+            if(3*(i - 1) >= 5*(j - 1)){
+                console.log(`Tong la ${s = s - 3*(i - 1)}`);
+            }
+            else 
+            console.log(`Tong la ${s = s - 5*(j - 1)}`);
+        }
+        else console.log(`Tong la ${s}`);
+
+        
+        console.log(`Số bước nhảy của 3 để check lại ${i - 1}`);
+        console.log(`Số bước nhảy của 5 để check lại  ${j - 1}`);
+       
+        
+
+    </script>
+    
+</body>
+</html>
