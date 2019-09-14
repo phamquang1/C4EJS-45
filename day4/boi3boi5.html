@@ -8,10 +8,11 @@
 </head>
 <body>
     <script>
+        let n = Number(prompt(" nhập Tổng gần mong muốn :"));
         let i =1 ;
         let j =1 ;
         let s = 0;
-        while( s < 1000){ 
+        while( s < n){ 
            if( 3*i >= 5*j) {
                s = s + 5*j;
                j++;
@@ -25,7 +26,7 @@
                i++;
         }
      }
-        if( s >= 1000){
+        if( s >= n){
             if(3*(i - 1) >= 5*(j - 1)){
                 console.log(`Tong la ${s = s - 3*(i - 1)}`);
             }
@@ -34,7 +35,7 @@
         }
         else console.log(`Tong la ${s}`);
 
-        
+
         console.log(`Số bước nhảy của 3 để check lại ${i - 1}`);
         console.log(`Số bước nhảy của 5 để check lại  ${j - 1}`);
        
