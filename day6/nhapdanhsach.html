@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let danhSach = [];
+        let i = 1 ;
+        let dem = 0;
+        let dem1 = 0;
+        while(true){
+            let nhapChuCai = prompt("nhập chữ cái vào đây");
+            if(nhapChuCai === 'exit') {
+                break;
+            }
+            switch(nhapChuCai ){
+                case 'c': {
+                    let input = prompt("nhập tên sinh viên  ");
+                    danhSach.push(input);
+                    dem1 = dem1 + 1;
+                    break;
+                }
+                case 'r': {
+                    for (i = 1 ; i <= dem1 ;i++){
+                        let input =  prompt(`nhập STT của  Sinh viên của lần nhập thứ ${i}: `);
+                        danhSach[i -1] = danhSach[i-1] + " có STT là  " + input ;
+                        dem = dem + 1;
+                    }
+                    let output = prompt(`Bạn muốn lấy sinh viên thứ mấy `);
+                    output = Number(output);
+                    console.log(danhSach[output - 1 ]) ;  
+                    break ;
+                }
+                case 'u': {
+                    let input = prompt("nhập thêm STT sinh viên update:");
+                    let output = prompt("Tên sinh viên muốn nhập update :");
+                    for(let j = dem1 ; j < input ; j++){
+                        danhSach.push(output);
+                        danhSach[dem1] = danhSach[dem1] + " có STT là  " + input     ;
+                        dem1 = dem1 + 1;
+                    }
+                    console.log(danhSach[input -1 ]);
+                    break;
+                }
+                case 'd' : {
+                    let input = prompt("nhap thêm STT sinh viên để tý nữa xóa nó  : ");
+                    let output = prompt("nhập thêm tên sinh viên để tý xóa nó");
+                    for(let j = dem1 ; j < input;j++){
+                        danhSach.push(output);
+                        danhSach[dem1 ] = danhSach[dem1 ] + " có STT là " + input;
+                        console.log("danh sách chưa xóa : " + danhSach);
+                        danhSach.splice(dem1,1);
+                        console.log("danh sách đã xóa :" + danhSach);
+
+                    }
+                }
+                default :
+                alert("nhap lai di ");
+                break;
+            }
+        }
+    </script>
+    
+</body>
+</html>
