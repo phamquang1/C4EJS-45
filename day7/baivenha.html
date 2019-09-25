@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai ve nha</title>
+</head>
+<body>
+    <script>
+    
+        let student = [];
+        
+    while(true){
+        let a =  prompt("Nhap c r u d x or e :");
+        if(a === "e") {
+            break;
+        }
+        switch(a){
+            case "c" :
+            {
+                let b = {};
+                let key = prompt(" nhập số KEY mong muốn ví dụ : 2 or 3 or 4 ...."); // ví dụ số key là 2 tương ứng key  ( name , age) , key là 3 tương ứng ( name, age , id) tùy vào người dùng nhập
+                for( let i = 0 ; i < key ;i++){
+                let key1 = prompt("nhap KEY la name , age , id .....:"); // ví dụ nhập key là "name" , "age" , "id" .....( bất kì key nào muốn cho vào Object)
+                b[key1] = prompt("nhap value tuong ung voi KEY "); // tương ứng với key đã nhập vis dụ name : nhập "quang" , age thì nhập : " 18 
+                }
+                student.push(b);
+                console.log(student);
+                break;
+            }
+            case "r" :
+            {
+                let c = prompt("Nhập số thứ tự sinh viên muốn lấy :");
+                console.log(" sinh viên được lấy ");
+                console.log(student[c - 1]);
+                break;
+            }
+            case "u" :
+            {
+                let d = prompt(" nhập số thứ tự sinh viên muốn cập nhật ");
+                let key = prompt(" nhập số lượng KEY muốn sửa ");// ví dụ muốn sửa  key name thì nhập 1 , muốn sửa name và age thì nhập 2 ..........
+                for(let i = 0 ; i < key ; i++){
+                    let key1 = prompt("nhập KEY muốn sửa name or age ....: ");// ví dụ muôn sửa key name thì nhập " name " 
+                    student[key - 1][key1] = prompt(" nhập value sửa tương ứng với KEY  :"); // tương ứng, sửa name thì nhập 1 cái tên mới "abc" ....
+                }
+                console.log("danh sách sinh viên được update :");
+                console.log(student);
+                break;
+
+            }
+            case "d" : // Trường hợp 1 : xóa toàn bộ sinh viên ấy khỏi danh sách
+            {
+                let e = prompt(" nhập số thứ tự sinh viên muốn xóa ");
+                student.splice(e - 1,1);
+                console.log (student);
+                break;
+
+                     
+            }
+            case "x" : // Trường hợp 2 : Xóa 1 KEY của sinh viên đó , ví dụ sinh viên đó có 2 key name và age , và muốn xóa name or muốn xóa age cũng được !!1
+            {
+                let g = prompt(" nhập số thứ tự sinh viên muốn xóaa ");
+                let key = prompt("nhập KEY muốn xóa name or age .....:"); // muốn xóa name thì nhập "name " , muốn xóa age thì nhập "age "
+                delete student[g - 1][key];
+                console.log(" sau khi xóa key thì sinh viên ấy còn lại là ");
+                console.log(student[g - 1]);
+                break;
+            }
+
+    }
+    
+ }
+    
+    </script>
+    
+</body>
+</html>
