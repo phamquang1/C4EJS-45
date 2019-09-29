@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function GiamDan( a = []){
+            let min ;
+            for(let i = 0;i < a.length - 1 ;i++){
+                for(let j = i + 1;j < a.length ;j++){
+                    if( a[i] < a[j]){
+                        min = a[i];
+                        a[i] = a[j];
+                        a[j] = min;
+                        }
+                    }
+                }
+        console.log( " la so be thu 2 : " + a[1]);
+        console.log(" Day dc sap xep giam dan là : " + a);
+        }
+        let b = []
+        let c = prompt(" nhap so luong phan tu ");
+        for(let i = 0 ; i < c ;i++){
+            let d = prompt("nhap so phan tu ");
+            b.push(d);
+        }
+        GiamDan(b);
+
+     
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>
