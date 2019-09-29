@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function KiTu(a){
+            let b = [];
+            for(let i = 0; i < a.length;i++ ){
+                b[i] = a.charAt(i);
+            }
+            return b ;
+        }
+
+        function ThuanNghich(c = []){
+            for(let i = 0 ;i < c.length/2 ; i ++){
+                if(c[i] != c[c.length - i -1 ]){
+                    console.log("no");
+                }
+                else console.log("yes");
+            }
+        }
+        let d = prompt("nhap string ");
+        ThuanNghich(KiTu(d));
+
+
+    
+    
+    </script>
+    
+</body>
+</html>
