@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="10" id="10">1212
+        <li class="a" id="1">Pham Bao Ngoc</li>
+        <li class="b" id="2">Nguyen Van Dong</li>
+        <li class="c" id="3">Dang Duy</li>
+    </ul>
+    <ul>
+        <li>hahahahha</li>
+        <li>hahahhahah</li>
+    </ul>
+
+
+
+    <script>
+        
+        // U
+        document.getElementById("1").innerHTML="Pham Dinh Quang";
+        document.getElementById("2").innerHTML="ABCCCCCCCCCCCCCC";
+        document.getElementById("3").innerHTML="EFGHHHHHHHHHHHHH";
+        // D
+        let a = document.getElementsByTagName("li");
+        a[0].remove();
+        // C
+       let c = document.querySelector('ul');
+        let b = document.createElement('li');
+        b.textContent = 'Messi';
+        c.appendChild(b);
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
