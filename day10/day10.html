@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai4.css" ref = "stylesheet">
+</head>
+<body>
+    <button onclick="myFunction()">Bấm vào đây</button>
+    <input id="in" type="text">
+    <ul id="dsach" ></ul>
+    <script>
+        function myFunction (){
+            let a =  document.getElementById("in").value;
+                document.getElementById("dsach").innerHTML += `<li>${a}</li>`;
+            
+        }
+    
+    
+    
+    
+    
+    </script>
+
+
+
+
+    <script src="bai4.js"></script>
+</body>
+</html>
