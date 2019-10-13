@@ -4,10 +4,14 @@ function check(a){
         if(isNaN(a) === true) resolve(a);
         else reject("no");
     })
-    newPromise.then(function(a){
-        console.log(a);
-    }).catch(function(a){
-        console.log("no");
-    })
+    return newPromise;
 }
-check(a)
+async function check(a){
+    try {   
+        let b = await newPromise;
+        console.log(b);
+} catch (err){
+    console.log(err)
+}
+call(a);
+
