@@ -1,13 +1,15 @@
 let a = prompt();
-function check(a){
-    let newPromise = new Promise(function(resolve,reject){
-        if(isNaN(a) === true) resolve(a);
-        else reject("no");
+let newPromise = new Promise(function(resolve,reject){
+    if(isNaN(a) === true) resolve(a);
+    else reject("no");
     })
-    newPromise.then(function(a){
+    return newPromise;
+}
+function call(){
+    check(a).then(function(){
         console.log(a);
-    }).catch(function(a){
+    }).catch(function(){
         console.log("no");
     })
 }
-check(a)
+call()
