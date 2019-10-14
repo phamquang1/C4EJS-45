@@ -6,12 +6,14 @@ function check(a){
     })
     return newPromise;
 }
-async function check(a){
+async function call(){
     try {   
-        let b = await newPromise;
+        let b = await check(a);
         console.log(b);
-} catch (err){
+} 
+catch (err){
     console.log(err)
 }
-call(a);
+}
+call();
 
